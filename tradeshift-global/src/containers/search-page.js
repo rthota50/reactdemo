@@ -26,7 +26,15 @@ class SearchPage extends React.Component {
   }
 
   showCompanyInfo = () => {
+    this.activateModal();
+  }
 
+  activateModal = () => {
+    this.setState({showModal: true})
+  }
+
+  closeModal = (e) => {
+    this.setState({showModal: false});
   }
 
   loadCountries = () => {
@@ -72,7 +80,7 @@ class SearchPage extends React.Component {
       overflowy: 'auto'
     };
     return (<Fragment>
-      <Modal />
+      <Modal showModal={this.state.showModal} closeModal={this.closeModal} />
       <div className="columns">
         <div className="column is-one-fifth">
           <div className="field">
