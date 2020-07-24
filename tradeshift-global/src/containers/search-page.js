@@ -16,16 +16,14 @@ class SearchPage extends React.Component {
     this.loadCountries = this.loadCountries.bind(this);
     this.setCountry = this.setCountry.bind(this);
     this.searchForCompanies = this.searchForCompanies.bind(this);
-    this.showCompanyInfo = this.showCompanyInfo.bind(this);
+    
   }
 
   componentDidMount() {
     this.loadCountries();
   }
 
-  showCompanyInfo = (e) = {
-
-  }
+ 
 
   loadCountries = () => {
     Api({url: 'getcountries'})
@@ -88,8 +86,8 @@ class SearchPage extends React.Component {
         {
           companies && companies.length > 0 && companies.map((c, i) => {
             return (
-              <Fragment key={i.toString()} onClick={this.showCompanyInfo(c.id)}>
-                <div onClick={}>
+              <Fragment key={i.toString()}>
+                <div>
                 <div>{c.name}</div>
                 <div>{c.address}</div>
                 </div>
