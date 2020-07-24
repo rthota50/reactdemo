@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const container = document.createElement('div');
+document.body.appendChild(container);
 ReactDOM.render(
   <React.StrictMode>
     <App />

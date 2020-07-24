@@ -1,0 +1,3 @@
+function invokeModal(_modalType) {
+    
+}
